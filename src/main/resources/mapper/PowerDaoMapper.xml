@@ -5,4 +5,7 @@
     <select id="getPList" resultType="map">
         select * from tb_power
     </select>
+    <select id="getTree" resultType="map">
+        select * from tree
+    </select>
 </mapper>

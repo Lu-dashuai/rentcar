@@ -26,7 +26,7 @@ public class PowerServiceImpl implements PowerService {
         //判断是否为空
         if(powerAllList!=null&&powerAllList.size()>0){
             for(TreeNode ptreeNode:powerAllList){
-                if(ptreeNode.getParentId()==0){//如果等于0,说明是一级节点
+                if(ptreeNode.getPid()==0){//如果等于0,说明是一级节点
                     powerTempList.add(ptreeNode);
                     //递归绑定子节点,ptreeNode是所有的父节点
                     bindChirldren(ptreeNode,powerAllList);
@@ -35,6 +35,12 @@ public class PowerServiceImpl implements PowerService {
         }
         return powerTempList;
     }
+
+    @Override
+    public List<Map> getPowerList1() {
+        return powerDao.getTree();
+    }
+
     /**
      * 毫无理由
      * @return
@@ -69,7 +75,7 @@ public class PowerServiceImpl implements PowerService {
      */
     private  void bindChirldren(TreeNode parentTreeNode,List<TreeNode> powerAllList ){
         for(TreeNode chirldrenTreeNode:powerAllList){
-            if(parentTreeNode.getId()==chirldrenTreeNode.getParentId()){
+            if(parentTreeNode.getId()==chirldrenTreeNode.getPid()){
                 //获取当前节点的所有子节点集合
                 List<TreeNode> children = parentTreeNode.getChildren();
                 if(children==null){//如果孩子节点为空,

@@ -9,4 +9,6 @@ public interface PowerDao {
      * @return
      */
     List<Map> getPList();
+
+    List<Map> getTree();
 }

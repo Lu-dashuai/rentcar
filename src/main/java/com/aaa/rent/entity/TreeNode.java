@@ -12,19 +12,19 @@ import java.util.List;
 public class TreeNode {
 
 	 private Integer id;
-	 private String name;
-	 private Integer parentId;
+	 private String text;
+	 private Integer pid;
 	 private String state;
 	 private String iconCls;
 	 private String url;
 	 //因为要选择树节点
 	 private String checked;
-	 public TreeNode(int id, String name, int parentId, String state,
+	 public TreeNode(int id, String text, int pid, String state,
 			String iconCls, String url, String checked) {
 		super();
 		this.id = id;
-		this.name = name;
-		this.parentId = parentId;
+		this.text = text;
+		this.pid = pid;
 		this.state = state;
 		this.iconCls = iconCls;
 		this.url = url;
@@ -35,18 +35,16 @@ public class TreeNode {
 	/**
 	  * 带参构造
 	  * @param id
-	  * @param name
-	  * @param parentId
 	  * @param state
 	  * @param iconCls
 	  * @param url
 	  */
-	 public TreeNode(int id, String name, int parentId, String state,
+	 public TreeNode(int id, String text, int pid, String state,
 			String iconCls, String url) {
 		super();
 		this.id = id;
-		this.name = name;
-		this.parentId = parentId;
+		this.text = text;
+		this.pid = pid;
 		this.state = state;
 		this.iconCls = iconCls;
 		this.url = url;
@@ -80,20 +78,20 @@ public class TreeNode {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getText() {
+		return text;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setText(String text) {
+		this.text = text;
 	}
 
-	public Integer getParentId() {
-		return parentId;
+	public Integer getPid() {
+		return pid;
 	}
 
-	public void setParentId(Integer parentId) {
-		this.parentId = parentId;
+	public void setPid(Integer pid) {
+		this.pid = pid;
 	}
 
 	public String getState() {
