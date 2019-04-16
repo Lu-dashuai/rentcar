@@ -12,6 +12,15 @@ public class User {
     private String password;
     private String phone_number;
     private String email;
+    private Integer role_id;
+
+    public Integer getRole_id() {
+        return role_id;
+    }
+
+    public void setRole_id(Integer role_id) {
+        this.role_id = role_id;
+    }
 
     public int getId() {
         return id;

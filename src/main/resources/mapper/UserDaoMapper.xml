@@ -5,4 +5,7 @@
     <select id="getUserList" resultType="com.aaa.rent.entity.User">
         select * from user
     </select>
+    <select id="getUserByName" resultType="com.aaa.rent.entity.User">
+        select * from user where username=#{username}
+    </select>
 </mapper>

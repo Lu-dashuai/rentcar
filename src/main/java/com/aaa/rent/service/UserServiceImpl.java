@@ -5,6 +5,7 @@ import com.aaa.rent.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
+import java.util.Map;
 
 /**
  * className:UserServiceImpl
@@ -20,5 +21,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<User> getUserList() {
         return userDao.getUserList();
+    }
+
+    @Override
+    public List<User> getUserByName(Map map) {
+        return userDao.getUserByName(map);
     }
 }

@@ -29,11 +29,20 @@ public class GoBackController {
         return "back/emp";
     }
     /**
-     * 跳转emp
+     * 跳转后台首页
      * @return
      */
     @RequestMapping("toIndex")
     public String toIndex(){
         return "back/index";
     }
+    /**
+     * 跳转后台登陆页面
+     * @return
+     */
+    @RequestMapping("toLogin")
+    public String toLogin(){
+        return "index";
+    }
+
 }

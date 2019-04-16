@@ -14,4 +14,6 @@ import java.util.Map;
 public interface UserService {
 
     List<User> getUserList();
+
+    List<User> getUserByName(Map map);
 }

@@ -16,4 +16,6 @@ import java.util.Map;
 public interface UserDao {
 
     List<User> getUserList();
+
+    List<User> getUserByName(Map map);
 }
